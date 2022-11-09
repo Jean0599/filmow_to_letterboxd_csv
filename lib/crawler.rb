@@ -155,7 +155,9 @@ class Crawler
 
                     director = info_divs[2].text[/: (.*?)\n/m, 1]
 
-                    title  = pk_page[:movie]['title_orig']
+                    title  = pk_page[:movie]['title']
+
+                    title_org  = pk_page[:movie]['title_orig']
 
                     diary_date = @create_diary_entry ? Time.now.strftime('%Y-%m-%d') : nil
 
